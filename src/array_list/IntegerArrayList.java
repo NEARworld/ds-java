@@ -29,5 +29,13 @@ public class IntegerArrayList {
         items[idx] = value;
         size++;
     }
+
+    public void traverse() {
+        for (int i = 0; i < size; ++i) {
+            System.out.print("| ");
+            System.out.print(items[i] + " ");
+        }
+        System.out.print("|");
+    }
 }
 
