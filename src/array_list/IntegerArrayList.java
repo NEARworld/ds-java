@@ -18,5 +18,16 @@ public class IntegerArrayList {
         items = new Integer[n];
         size = 0;
     }
+
+    public void add(int idx, int value) {
+        if (idx < 0 || idx > size || size >= items.length) {
+            throw new RuntimeException("Something went wrong");
+        }
+        for (int i = size-1; i >= idx; --i) {
+            items[i + 1] = items[i];
+        }
+        items[idx] = value;
+        size++;
+    }
 }
 
